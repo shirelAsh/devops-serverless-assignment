@@ -1,0 +1,1 @@
+{"statusCode": 200, "body": "{\"timestamp_utc\": \"2026-05-11T16:35:42.122430+00:00\", \"bucket\": \"infrastack-assignmentbucket0e512d78-mntwbcgcitxz\", \"object_count\": 2, \"objects\": [\"example1.txt\", \"example2.txt\"]}"}
