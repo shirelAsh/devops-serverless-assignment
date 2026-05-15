@@ -44,6 +44,7 @@ flowchart LR
 ├── lambda/                # Lambda handler (app.py)
 ├── sample_files/          # Files uploaded to S3 on deploy
 ├── scripts/               # Manual test scripts
+├── docs/screenshots/      # Verification screenshots
 ├── .github/workflows/     # GitHub Actions deploy workflow
 └── README.md
 ```
@@ -169,6 +170,20 @@ aws cloudformation describe-stacks \
 
 **S3** — Bucket contains `example1.txt` and `example2.txt` from `sample_files/` (uploaded during `cdk deploy` via `BucketDeployment`).
 
+## Verification screenshots
+
+### GitHub Actions deploy (CI/CD)
+
+Manual `workflow_dispatch` run — stack `InfraStack` deployed successfully via CDK.
+
+![GitHub Actions deploy success](docs/screenshots/github-actions-deploy-success.png)
+
+### SNS notification (manual Lambda invoke)
+
+Email received after invoking the Lambda (subject: `Lambda execution report`).
+
+![SNS email with Lambda execution report](docs/screenshots/sns-lambda-execution-email.png)
+
 ## IAM permissions
 
 The Lambda execution role is created by CDK with least-privilege grants:
@@ -194,3 +209,6 @@ pytest
 | Empty object list | Redeploy so `BucketDeployment` runs; check bucket name in Lambda env matches stack bucket. |
 | GitHub Actions deploy fails | Repository secrets set; IAM user can run CDK deploy. |
 
+## License
+
+Technical interview take-home assignment. All rights reserved.
