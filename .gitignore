@@ -1,0 +1,13 @@
+# IDE / local test output
+.idea/
+response.json
+*.swp
+
+# Python
+__pycache__/
+*.egg-info
+
+# CDK (infra/)
+infra/.venv/
+infra/cdk.out/
+.cdk.staging
