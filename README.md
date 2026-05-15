@@ -194,6 +194,3 @@ pytest
 | Empty object list | Redeploy so `BucketDeployment` runs; check bucket name in Lambda env matches stack bucket. |
 | GitHub Actions deploy fails | Repository secrets set; IAM user can run CDK deploy. |
 
-## License
-
-Academic assignment project.
